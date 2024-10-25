@@ -3,4 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ChooseFragment" />
+    tools:context=".ui.ChooseFragment" >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="169dp"
+        android:layout_height="149dp"
+        android:text="ide gyűjtögetheti a felhasználó amit venni akar "
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="203dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

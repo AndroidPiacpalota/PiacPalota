@@ -3,4 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AccountFragment" />
+    tools:context=".ui.AccountFragment" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="313dp"
+        android:layout_height="278dp"
+        android:text="Ide jönnének a felhasználó adatai "
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="125dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
