@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/buyFragment"
-        android:name="com.example.piacpalota.u.i.BuyFragment"
+        android:name="com.example.piacpalota.u.i.buylist.BuyFragment"
         tools:layout="@layout/fragment_buy" />
 
     <fragment

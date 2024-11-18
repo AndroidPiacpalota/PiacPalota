@@ -7,10 +7,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.piacpalota.domain.Buy;
+import com.example.piacpalota.u.i.buydetails.BuyDetailsFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.example.piacpalota.u.i.AccountFragment;
-import com.example.piacpalota.u.i.BuyFragment;
+import com.example.piacpalota.u.i.buylist.BuyFragment;
 import com.example.piacpalota.u.i.ChooseFragment;
 import com.example.piacpalota.u.i.HomeFragment;
 import com.example.piacpalota.u.i.LogInFragment;
@@ -21,7 +26,13 @@ import com.example.piacpalota.u.i.SingInFragment;
 import com.example.piacpalota.u.i.UpLoadFragment;
 import com.example.piacpalota.u.i.AboutFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BuyFragment.OnBuySelectedListener {
+
+    private Buy selectedBuy;
+
+    public Buy getSelectedBuy() {
+        return selectedBuy;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +47,24 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             replaceFragment(new HomeFragment());
         }
+    }
+
+    @Override
+    public void onBuySelected(Buy buy) {
+        showBuyDetails(buy);  // Meghívjuk a showBuyDetails metódust
+    }
+
+    public void showBuyDetails(Buy buy) {
+        this.selectedBuy = buy;
+        loadFragment(new BuyDetailsFragment(), "buyDetails");
+    }
+
+    private void loadFragment(Fragment fragment, String tag) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragmentContainerView, fragment, tag);
+        transaction.addToBackStack(tag);
+        transaction.commit();
     }
 
     @Override
