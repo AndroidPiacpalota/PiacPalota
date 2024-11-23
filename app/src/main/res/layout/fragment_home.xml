@@ -4,42 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".u.i.HomeFragment" >
+    tools:context=".u.i.HomeFragment">
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="263dp"
         android:layout_height="113dp"
+        android:background="#0B0B0B"
         android:text="Bejelentkézes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/registButton"
-        android:layout_width="263dp"
-        android:layout_height="113dp"
-        android:text="Regisztráció"
+        android:layout_width="184dp"
+        android:layout_height="41dp"
+        android:background="#020202"
+        android:text="Regisztrálj"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton"
+        app:layout_constraintVertical_bias="0.784"
         tools:ignore="HardcodedText" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/intro"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="229dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="94dp"
-        android:layout_marginTop="186dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="51dp"
-        android:text="Ide jöhetne valami üdvözöljük duma? "
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textView3"
+        android:layout_width="146dp"
+        android:layout_height="41dp"
+        android:text="Még nem regisztráltál?"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="901dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
