@@ -4,53 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".ui.LogInFragment" >
 
+    <!-- Bejelentkezés gomb -->
     <Button
         android:id="@+id/logButton"
-        android:layout_width="245dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="Bejelentkezés"
-        android:textSize="26sp"
+        android:textSize="22sp"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:background="@color/button_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logPasswordTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/logPasswordTextText"
+        app:layout_constraintHorizontal_bias="0.5" /> <!-- Középre igazítva -->
 
+    <!-- Jelszó mező -->
     <EditText
         android:id="@+id/logPasswordTextText"
-        android:layout_width="210dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="417dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="132dp"
-        android:ems="10"
-        android:hint="jelszó"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Jelszó"
         android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/logButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" /> <!-- Középre igazítva -->
 
+    <!-- Felhasználónév mező -->
     <EditText
         android:id="@+id/felhaszEditTextText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="318dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="92dp"
-        android:ems="10"
+        android:layout_marginTop="16dp"
         android:hint="Felhasználónév"
         android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/logPasswordTextText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" /> <!-- Középre igazítva -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
