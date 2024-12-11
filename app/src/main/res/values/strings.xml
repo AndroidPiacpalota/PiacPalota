@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PiacPalota</string>
+    <string name="k_p_felt_lt_se">Kép feltöltése</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

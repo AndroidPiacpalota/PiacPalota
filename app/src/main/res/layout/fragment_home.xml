@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".u.i.HomeFragment">
+
+    <!-- Kép -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/kosar_kezdoldalra"
+        android:layout_width="399dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginBottom="17dp"
+        app:lottie_rawRes="@raw/kosar_kezdoldalra"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        app:layout_constraintBottom_toTopOf="@+id/welcBuyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass" />
+
+
+    <Button
+        android:id="@+id/welcBuyButton"
+        android:layout_width="272dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="361dp"
+        android:text="Bejelentkezés"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kosar_kezdoldalra" />
+
+    <Button
+        android:id="@+id/welcSaleButton"
+        android:layout_width="272dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="96dp"
+        android:text="Regisztráció"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcBuyButton" />
+
+    <TextView
+        android:id="@+id/homeText"
+        android:layout_width="272dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="8dp"
+        android:text="Még nem regisztráltál? "
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/welcSaleButton"
+        app:layout_constraintEnd_toEndOf="@+id/welcBuyButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/welcBuyButton"
+        app:layout_constraintTop_toBottomOf="@+id/welcBuyButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

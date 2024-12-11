@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_home"
+        android:title="Főoldal"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_sales"
+        android:title="Eladás"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_buy"
+        android:title="Vásárlás"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_upload"
+        android:title="Feltöltés"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_choose"
+        android:title="Kosár"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_shopping"
+        android:title="Rendelés"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_message"
+        android:title="Üzenetek"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_account"
+        android:title="Fiókom"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_logout"
+        android:title="Kilépés"
+        android:icon="@drawable/baseline_home_white_19dp"
+        app:showAsAction="never" />
+
+</menu>

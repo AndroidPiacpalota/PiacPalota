@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_HomeFragment_to_SingInFragment" type="id" />
+    <item name="action_HomeFragment_to_LogInFragment" type="id" />
+    <item name="action_homeFragment_to_loginFragment" type="id" />
+    <item name="action_homeFragment_to_singinFragment" type="id" />
+    <item name="action_logInFragment_to_welcomeFragment" type="id" />
+    <item name="action_welcome" type="id" />
+    <item name="profileImageView" type="id" />
+    <item name="nameTextView" type="id" />
+</resources>
