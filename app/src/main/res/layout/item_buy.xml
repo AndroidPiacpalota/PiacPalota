@@ -60,7 +60,7 @@
             android:id="@+id/product_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mennyiség: 1 kg"
+            android:text="Mennyiség: "
             android:textSize="16sp"
             android:textColor="#757575" />
 
