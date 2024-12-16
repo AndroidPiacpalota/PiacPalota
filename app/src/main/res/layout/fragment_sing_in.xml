@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" /> <!-- Középre igazítva -->
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Email mező -->
     <EditText
@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameEditText"
-        app:layout_constraintHorizontal_bias="0.5" /> <!-- Középre igazítva -->
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Jelszó mező -->
     <EditText
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailEditText"
-        app:layout_constraintHorizontal_bias="0.5" /> <!-- Középre igazítva -->
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Regisztráció gomb -->
     <Button
@@ -73,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordEditText" /> <!-- Középre igazítva -->
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
