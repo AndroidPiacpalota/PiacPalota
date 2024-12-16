@@ -2,11 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Engedélyek a médiához való hozzáféréshez -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
 
+    <!-- Tároláshoz való hozzáférés (Android 10 és régebbi rendszerekhez nem szükséges) -->
+    <!-- Ha nem használod a teljes fájlrendszert, a Scoped Storage alkalmazása a javasolt -->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" /> -->
+
+    <!-- Hálózati engedélyek (internetkapcsolat és hálózati állapot) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Az alkalmazás beállításai -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +26,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PiacPalota"
         tools:targetApi="31">
+
+        <!-- Fő Activity, amely elindítja az alkalmazást -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

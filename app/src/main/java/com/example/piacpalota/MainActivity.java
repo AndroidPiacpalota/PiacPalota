@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.piacpalota.u.i.MessagesFragment;
 import com.example.piacpalota.u.i.buylist.Product;
 import com.example.piacpalota.u.i.AccountFragment;
 import com.example.piacpalota.u.i.AboutFragment;
@@ -23,7 +24,6 @@ import com.example.piacpalota.u.i.BuyFragment;
 import com.example.piacpalota.u.i.ChooseFragment;
 import com.example.piacpalota.u.i.HomeFragment;
 import com.example.piacpalota.u.i.LogInFragment;
-import com.example.piacpalota.u.i.MessageFragment;
 import com.example.piacpalota.u.i.SalesFragment;
 import com.example.piacpalota.u.i.ShoppingFragment;
 import com.example.piacpalota.u.i.SingInFragment;
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements BuyFragment.OnBuy
         } else if (id == R.id.action_shopping) {
             selectedFragment = new ShoppingFragment();
         } else if (id == R.id.action_message) {
-            selectedFragment = new MessageFragment();
+            selectedFragment = new MessagesFragment();
         } else if (id == R.id.action_account) {
             selectedFragment = new AccountFragment();
         } else if (id == R.id.action_login) {

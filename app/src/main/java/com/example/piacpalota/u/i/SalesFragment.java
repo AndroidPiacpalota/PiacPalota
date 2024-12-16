@@ -18,9 +18,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SalesFragment extends Fragment {
 
-    private EditText nameEditText, priceEditText, quantityEditText, locationEditText, imageUrlEditText;
+    private EditText nameEditText, priceEditText, quantityEditText, locationEditText;
     private Button uploadButton;
-    private static final int PICK_IMAGE_REQUEST = 1; // Kép kiválasztásának kódja
 
     public SalesFragment() {
         // Required empty public constructor
@@ -35,49 +34,43 @@ public class SalesFragment extends Fragment {
         priceEditText = view.findViewById(R.id.priceEditText);
         quantityEditText = view.findViewById(R.id.quantityEditText);
         locationEditText = view.findViewById(R.id.locationEditText);
-        imageUrlEditText = view.findViewById(R.id.imageUrlEditText);
         uploadButton = view.findViewById(R.id.uploadButton);
 
-        // Kép feltöltése gomb click listener
-        uploadButton.setOnClickListener(v -> openFileChooser());
+        // Feltöltés gomb click listener
+        uploadButton.setOnClickListener(v -> uploadProduct(null)); // Alapértelmezett: nincs kép
 
         return view;
     }
 
-    // Kép kiválasztásának indítása
-    private void openFileChooser() {
-        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        intent.setType("image/*");
-        startActivityForResult(Intent.createChooser(intent, "Select Product Image"), PICK_IMAGE_REQUEST);
-    }
-
-    // Az ActivityResult kezelése a képek kiválasztásához
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == getActivity().RESULT_OK && data != null && data.getData() != null) {
-            Uri imageUri = data.getData();
-            uploadProduct(imageUri);
-        }
-    }
-
     // Termék feltöltése Firebase Firestore-ba
     private void uploadProduct(Uri imageUri) {
-        String name = nameEditText.getText().toString();
-        String price = priceEditText.getText().toString();
-        String quantity = quantityEditText.getText().toString();
-        String location = locationEditText.getText().toString();
-        String imageUrl = imageUri != null ? imageUri.toString() : imageUrlEditText.getText().toString();
+        String name = nameEditText.getText().toString().trim();
+        String price = priceEditText.getText().toString().trim();
+        String quantity = quantityEditText.getText().toString().trim();
+        String location = locationEditText.getText().toString().trim();
+        String imageUrl = imageUri != null ? imageUri.toString() : ""; // Kép opcionális
+
+        if (name.isEmpty() || price.isEmpty() || quantity.isEmpty() || location.isEmpty()) {
+            Toast.makeText(getActivity(), "Kérlek, töltsd ki az összes mezőt!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Product product = new Product(name, price, quantity, location, imageUrl);
         db.collection("products").add(product)
                 .addOnSuccessListener(documentReference -> {
                     Toast.makeText(getActivity(), "Sikeres feltöltés!", Toast.LENGTH_SHORT).show();
+                    clearInputs(); // Mezők ürítése a sikeres feltöltés után
                 })
                 .addOnFailureListener(e -> {
                     Toast.makeText(getActivity(), "Hiba történt a feltöltés során.", Toast.LENGTH_SHORT).show();
                 });
+    }
+
+    private void clearInputs() {
+        nameEditText.setText("");
+        priceEditText.setText("");
+        quantityEditText.setText("");
+        locationEditText.setText("");
     }
 }

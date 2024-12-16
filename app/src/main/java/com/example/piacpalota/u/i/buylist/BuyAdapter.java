@@ -47,6 +47,7 @@ public class BuyAdapter extends RecyclerView.Adapter<BuyAdapter.BuyViewHolder> {
         holder.productName.setText(product.getName());
         holder.productPrice.setText(product.getPrice());
         holder.productLocation.setText(product.getLocation());
+        holder.productQuantity.setText(product.getQuantity());
 
         // Kép betöltése Glide használatával
         Glide.with(context)
@@ -76,6 +77,7 @@ public class BuyAdapter extends RecyclerView.Adapter<BuyAdapter.BuyViewHolder> {
         TextView productName;
         TextView productPrice;
         TextView productLocation;
+        TextView productQuantity;
         LinearLayout productDetails; // Bővebb információk szekciója
 
         public BuyViewHolder(@NonNull View itemView) {
@@ -85,6 +87,7 @@ public class BuyAdapter extends RecyclerView.Adapter<BuyAdapter.BuyViewHolder> {
             productName = itemView.findViewById(R.id.product_name);
             productPrice = itemView.findViewById(R.id.product_price);
             productLocation = itemView.findViewById(R.id.product_location);
+            productQuantity = itemView.findViewById(R.id.product_quantity);
             productDetails = itemView.findViewById(R.id.product_details); // Bővebb információk szekciója
         }
     }
