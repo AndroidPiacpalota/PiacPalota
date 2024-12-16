@@ -25,6 +25,12 @@
     </fragment>
 
     <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.piacpalota.u.i.RegistrationFragment"
+        android:label="Regisztráció"
+        tools:layout="@layout/fragment_registration" />
+
+    <fragment
         android:id="@+id/salesFragment"
         android:name="com.example.piacpalota.u.i.SalesFragment"
         tools:layout="@layout/fragment_sales" />
